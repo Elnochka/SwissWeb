@@ -1,0 +1,25 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+        "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping>
+    <class name="example.entity.Statistic" table="statistic" catalog="h2">
+        <id name="id" type="java.lang.Integer">
+            <column name="id" />
+            <generator class="identity" />
+        </id>
+        <property name="longest" type="string">
+            <column name="longest" length="100" not-null="true" unique="true" />
+        </property>
+        <property name="shortest" type="string">
+            <column name="shortest" length="100" not-null="true" unique="true" />
+        </property>
+        <property name="length" type="java.lang.Integer">
+            <column name="length" />
+        </property>
+        <property name="average" type="java.lang.Double">
+            <column name="average" />
+        </property>
+
+    </class>
+</hibernate-mapping>
